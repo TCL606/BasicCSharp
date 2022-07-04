@@ -1,0 +1,19 @@
+name: Test_Operation
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: [ '6.0' ]
+      
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+      - name: Build
+        run: dotnet build ./hw1/hw1.sln --configuration Release
+      - name: Test
+        run: dotnet test ./hw1/hw1.sln --verbosity normal
