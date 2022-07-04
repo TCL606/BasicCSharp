@@ -10,7 +10,7 @@
 
 我们希望编写一个程序，用于统计某个变量被修改与被读取的次数。请在`BasicCSharp/hw1/hw1/Counting.cs`中完成对变量`Variable`被修改与被读取的次数统计。只允许修改`Counting`类中的代码，且满足以下要求
 
-- `Variable` 不能被外部程序赋值为负数。若被赋为负数，则将它置为0。
+- `Variable` 不能被外部程序赋值为负数。若被赋为负数，则将它代表的值置为0。
 - `ReadTimes` 为 `Variable` 被外部程序读取的次数。
 - `WriteTimes` 为 `Variable` 被外部程序修改的次数。
 

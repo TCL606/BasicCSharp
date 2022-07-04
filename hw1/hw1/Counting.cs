@@ -46,7 +46,7 @@ namespace Homework1
     {
         // 需要实现：分别统计变量Variable被读取、被修改的次数，只允许修改Counting类中的代码
         // 要求：
-        // 1. Variable 不能被外部程序赋值为负数。若被赋为负数，则将它置为0。
+        // 1. Variable 不能被外部程序赋值为负数。若被赋为负数，则将它代表的值置为0。
         // 2. ReadTimes 为 Variable 被外部程序读取的次数。
         // 3. WriteTimes 为 Variable 被外部程序修改的次数。
         //
