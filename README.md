@@ -39,7 +39,10 @@
 提供两种提交方式：
 
 1. GitHub 提交
-   - fork 仓库： [TCL606/BasicCSharp (github.com)](https://github.com/TCL606/BasicCSharp)到个人仓库，按要求修改好后，从个人仓库提pr到原本的仓库。
+   - fork 仓库： [TCL606/BasicCSharp (github.com)](https://github.com/TCL606/BasicCSharp)到个人仓库，按要求修改好后，从个人仓库提pr到原本的仓库，pr信息填写为：`CSharp_姓名_班级` （如：`CSharp_小明_无19`）。
 2. 邮箱提交
    - 只允许修改`BasicCSharp/hw1/hw1/Counting.cs`代码，修改好后，将`BasicCSharp`整个文件夹打包成常见压缩格式（如`.rar`、`.zip`等），并命名为：`CSharp_姓名_班级` （如：`CSharp_小明_无19`）发送到邮箱 **tcl606_thu@163.com**。
 
+## 截止日期
+
+2022.7.20
