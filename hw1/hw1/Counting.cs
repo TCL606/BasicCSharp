@@ -44,6 +44,37 @@ namespace Homework1
 
     public class Counting : ICountableVariable
     {
+        private int variable;
+        private int readTimes;
+        private int writeTimes;
+        public int Variable
+        {
+            get
+            {
+                readTimes++;
+                return variable;
+            }
+            set
+            {
+                int temp = value < 0 ? 0 : value;
+                if (variable != temp) writeTimes++;
+                variable = temp;
+            }
+        }
+        public int ReadTimes
+        {
+            get
+            {
+                return readTimes;
+            }
+        }
+        public int WriteTimes
+        {
+            get
+            {
+                return writeTimes;
+            }
+        }
         // 需要实现：分别统计变量Variable被读取、被修改的次数，只允许修改Counting类中的代码
         // 要求：
         // 1. Variable 不能被外部程序赋值为负数。若被赋为负数，则将它代表的值置为0。
