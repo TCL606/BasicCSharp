@@ -66,10 +66,13 @@ namespace Homework1
             }
             set
             {
-                variable = value > 0 ? value : 0; //修改保护
-
                 //修改计数
-                if(value != variable || writeTimes == 0) writeTimes ++;
+                int trueValue = ( value > 0 ? value : 0 );//修改保护
+                if(variable != trueValue || writeTimes == 0) //如果与当前要赋的值不同，或者是第一次赋值都表示要赋值
+                {
+                    variable = trueValue; 
+                    writeTimes ++;
+                }
             }
         }
 
