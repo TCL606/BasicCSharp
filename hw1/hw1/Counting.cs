@@ -52,5 +52,30 @@ namespace Homework1
         //
         // 注意：是Variable被修改！！！
         // 如果Variable要被赋予的值与当前的值相同，这并不是被修改！
+        public int variable=0;
+        public int readTimes = 0;
+        public int writeTimes = 0;
+        public int ReadTimes { get{
+            return readTimes;
+        }set{
+            readTimes=value;
+        } }
+        public int WriteTimes { get{
+            return writeTimes;
+        }set{
+            writeTimes=value;
+        } }
+        public int Variable { get{
+                readTimes++;
+                return variable;
+            } set{
+                int temp = variable;
+                variable=value>=0?value : 0;
+                if(temp!=variable){
+                    writeTimes++;
+                }
+                
+            } 
+        }
     }
 }
