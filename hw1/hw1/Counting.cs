@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -52,5 +52,41 @@ namespace Homework1
         //
         // 注意：是Variable被修改！！！
         // 如果Variable要被赋予的值与当前的值相同，这并不是被修改！
+        // 如果Variable要被赋予的值与当前的值不同，则被修改。
+        
+        int variable = 0;
+        int read_times = 0;
+        int write_times = 0;
+
+        public Counting()
+        {
+            read_times = 0;
+            write_times = 0;
+        }
+
+        public int Variable
+        {
+            get
+            {
+                read_times++;
+                return variable;
+            }
+            set
+            {
+                if (value != variable)
+                {
+                    int temp = variable;
+                    variable = value >= 0 ? value : 0;
+                    if( variable != temp )
+                    {
+                        write_times++;
+                    }
+                }
+            }
+        }
+    
+        public int ReadTimes { get => read_times; }
+        public int WriteTimes { get => write_times; }
+    
     }
 }
