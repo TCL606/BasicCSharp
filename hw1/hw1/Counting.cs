@@ -50,6 +50,56 @@ namespace Homework1
         // 2. ReadTimes 为 Variable 被外部程序读取的次数。
         // 3. WriteTimes 为 Variable 被外部程序修改的次数。
         //
+        private int variable;
+        private int readTimes;
+        private int writeTimes;
+        public int Variable
+        {
+            get
+            {
+                readTimes++;
+                return variable;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    if (variable == 0) 
+                        return;
+                    else
+                    {
+                        variable = 0;
+                        writeTimes++;
+                        return;
+                    }
+                }
+                else
+                {
+                    if (variable == value) 
+                        return;
+                    else
+                    {
+                        variable = value;
+                        writeTimes++;
+                        return;
+                    }
+                }
+            }
+        }
+        public int ReadTimes
+        {
+            get
+            {
+                return readTimes;
+            }
+        }
+        public int WriteTimes
+        {
+            get
+            {
+                return writeTimes;
+            }
+        }
         // 注意：是Variable被修改！！！
         // 如果Variable要被赋予的值与当前的值相同，这并不是被修改！
     }
